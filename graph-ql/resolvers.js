@@ -1,6 +1,9 @@
+import { people } from '../data'
+
 const resolvers = {
     Query: {
-        name: () => 'nick'
+        people: () => people,
+        person: (_, {id}) => (people.filter((person) => person.id === id))[0]
     }
 }
 
