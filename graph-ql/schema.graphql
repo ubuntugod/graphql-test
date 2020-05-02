@@ -8,3 +8,7 @@ type Query {
     people: [Person]!,
     person(id: Int!): Person
 }
+
+type Mutation {
+    addPerson(name: String!, age: Int!): Person!
+}
